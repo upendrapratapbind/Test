@@ -13,12 +13,13 @@ class UserDataViewModel: ViewModel() {
     val  userList:LiveData<List<User>> = _userList
     fun fetchUserData(){
         viewModelScope.launch {
+
             try {
                 val user=userRepository.getUserData()
                 _userList.value=user
 
             }catch (e:Exception){
-
+                 println(e.localizedMessage)
             }
         }
     }
