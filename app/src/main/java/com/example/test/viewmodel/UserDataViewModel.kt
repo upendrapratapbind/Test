@@ -19,7 +19,6 @@ class UserDataViewModel: ViewModel() {
 
             }catch (e:Exception){
 
-
             }
         }
     }
